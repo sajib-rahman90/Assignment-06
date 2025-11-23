@@ -28,6 +28,9 @@ const displayCategories = (categories) => {
 // loadTrees and displayTrees functionality
 
 const loadTrees = (id) => {
+  document.getElementById("card-container").classList.add("hidden");
+  document.getElementById("loading-spinner").classList.remove("hidden");
+
   const catBtn = document.querySelectorAll(".btn-category");
   catBtn.forEach((btn) => btn.classList.remove("active"));
 
@@ -86,6 +89,8 @@ const displayTrees = (trees) => {
     `;
     cardContainer.append(cardDiv);
   });
+  document.getElementById("card-container").classList.remove("hidden");
+  document.getElementById("loading-spinner").classList.add("hidden");
 };
 
 const loadTreeDetails = (id) => {
