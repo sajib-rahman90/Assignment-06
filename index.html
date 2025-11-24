@@ -104,7 +104,7 @@
           Choose Your Trees
         </h1>
 
-        <div id="loading-spinner" class=" text-center hidden">
+        <div id="loading-spinner" class="text-center hidden">
           <span class="loading loading-dots loading-xl"></span>
         </div>
 
@@ -117,12 +117,9 @@
             <h1 class="text-[#1F2937] text-[20px] font-semibold pb-3">
               Categories
             </h1>
-            <button class="w-full hover:bg-green-600 text-[16px]">
+            <!-- <button class="w-full hover:bg-green-600 text-[16px]">
               All Trees
-            </button>
-            <button class="w-full hover:bg-green-600 text-[16px]">
-              Fruit Tree
-            </button>
+            </button> -->
           </div>
 
           <!-- Cards Section -->
@@ -164,22 +161,24 @@
           </div>
 
           <!-- Cart Section -->
-          <div
-            id="cart-container"
-            class="md:col-span-2 bg-white rounded-2xl p-4 space-y-2"
-          >
+          <div class="md:col-span-2 bg-white rounded-2xl p-4 space-y-2">
             <h1 class="text-[20px] font-semibold">Your Cart</h1>
-
-            <div
-              class="bg-[#f0fdf4] flex items-center justify-between rounded-lg py-2 px-3"
-            >
-              <div>
-                <h4>Mango Tree</h4>
-                <p>৳500</p>
-              </div>
-              <span><i class="fa-solid fa-xmark text-red-600"></i></span>
+            <div id="cart-container" class="grid grid-cols-1 gap-3">
+              <!-- Simple Cart -->
+              <!-- <div
+                class="bg-[#f0fdf4] flex items-center justify-between rounded-lg py-2 px-3"
+              >
+                <div>
+                  <h4>Mango Tree</h4>
+                  <p>৳500</p>
+                </div>
+                <span><i class="fa-solid fa-xmark text-red-600"></i></span>
+              </div> -->
             </div>
-            <p class="text-right">Total: ৳<span>1000</span></p>
+
+            <p class="text-right text-[#1f2937] text-[15px] font-bold">
+              Total: ৳<span id="cart-total">0</span>
+            </p>
           </div>
         </div>
       </section>
@@ -230,7 +229,7 @@
           </div>
 
           <div class="card bg-white rounded-xl p-10 text-center">
-            <span class="text-[32px] text-[#15803d] font-semibold">30K+</span>
+            <span class="text-[32px] text-[#15803d] font-semibold">30+</span>
             <p>Countries Reached</p>
           </div>
         </div>
@@ -280,10 +279,7 @@
     <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
       <div class="modal-box">
         <!-- modal details -->
-        <div id="display-modal" class="bg-white rounded-lg space-y-4">
-          
-          </div>
-        </div>
+        <div id="display-modal" class="bg-white rounded-lg space-y-4"></div>
         <div class="modal-action">
           <form method="dialog">
             <!-- if there is a button in form, it will close the modal -->
