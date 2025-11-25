@@ -29,7 +29,6 @@ const displayCategories = (categories) => {
 };
 
 // loadTrees and displayTrees functionality
-
 const loadTrees = (id) => {
   document.getElementById("card-container").classList.add("hidden");
   document.getElementById("loading-spinner").classList.remove("hidden");
@@ -96,6 +95,7 @@ const displayTrees = (trees) => {
   document.getElementById("loading-spinner").classList.add("hidden");
 };
 
+// loadTreeDetails functionality
 const loadTreeDetails = (id) => {
   const url = `https://openapi.programming-hero.com/api/plant/${id}`;
   fetch(url)
@@ -103,6 +103,7 @@ const loadTreeDetails = (id) => {
     .then((data) => displayTreeDetails(data.plants));
 };
 
+// displayTreeDetails functionality
 const displayTreeDetails = (plants) => {
   const displayModal = document.getElementById("display-modal");
   displayModal.innerHTML = `
@@ -130,6 +131,7 @@ const displayTreeDetails = (plants) => {
   document.getElementById("my_modal_5").showModal();
 };
 
+//  Random Plant show functionality
 const allPlants = () => {
   fetch("https://openapi.programming-hero.com/api/plants")
     .then((res) => res.json())
@@ -191,6 +193,7 @@ const displayCart = (cart) => {
   }
 };
 
+//  removeCart functionality
 const removeCart = (btn) => {
   const item = btn.parentNode;
   const cartId = Number(item.querySelector(".cart-id").innerText);
